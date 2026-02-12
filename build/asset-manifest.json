@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/dalpat/static/css/main.9557cecd.css",
+    "main.js": "/dalpat/static/js/main.e3be0e53.js",
+    "static/js/453.4e0e11c6.chunk.js": "/dalpat/static/js/453.4e0e11c6.chunk.js",
+    "index.html": "/dalpat/index.html",
+    "main.9557cecd.css.map": "/dalpat/static/css/main.9557cecd.css.map",
+    "main.e3be0e53.js.map": "/dalpat/static/js/main.e3be0e53.js.map",
+    "453.4e0e11c6.chunk.js.map": "/dalpat/static/js/453.4e0e11c6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9557cecd.css",
+    "static/js/main.e3be0e53.js"
+  ]
+}

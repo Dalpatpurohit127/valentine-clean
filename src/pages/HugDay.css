@@ -1,0 +1,358 @@
+.hug-page {
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 10px;
+  position: relative;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+}
+
+/* BACK EMOJI */
+.emoji-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* FRONT EMOJI */
+.emoji-front {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* Emoji Style */
+.emoji {
+  position: absolute;
+  opacity: 0.85;
+  animation: floatEmoji 10s linear infinite;
+  filter: drop-shadow(0px 0px 8px rgba(255, 255, 255, 0.8));
+}
+
+@keyframes floatEmoji {
+  0% {
+    transform: translateY(110vh) rotate(0deg);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.85;
+  }
+  100% {
+    transform: translateY(-20vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Container */
+.hug-container {
+  max-width: 900px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0px 10px 35px rgba(0, 0, 0, 0.25);
+  position: relative;
+  z-index: 10;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Title */
+.hug-title {
+  font-size: 2.7rem;
+  font-weight: 900;
+  color: #b30047;
+  text-shadow: 0px 3px 15px rgba(255, 255, 255, 0.7);
+}
+
+.hug-subtitle {
+  margin-top: 8px;
+  font-size: 1.2rem;
+  color: #4a1c2d;
+  font-weight: 600;
+}
+
+/* Quote */
+.hug-quote-box {
+  margin-top: 18px;
+  padding: 12px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.35);
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.hug-quote {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #7a1a3d;
+}
+
+/* Heart Animation Box */
+.hug-heart-box {
+  margin: 25px auto;
+  padding: 18px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.35);
+  box-shadow: 0px 6px 25px rgba(0, 0, 0, 0.2);
+}
+
+.hug-heart {
+  width: 80px;
+  height: 80px;
+  background: #ff3366;
+  margin: 0 auto;
+  position: relative;
+  transform: rotate(-45deg);
+  animation: pulse 1.5s infinite;
+  box-shadow: 0px 0px 25px rgba(255, 51, 102, 0.7);
+}
+
+.hug-heart::before,
+.hug-heart::after {
+  content: "";
+  width: 80px;
+  height: 80px;
+  background: #ff3366;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.hug-heart::before {
+  top: -40px;
+  left: 0;
+}
+
+.hug-heart::after {
+  left: 40px;
+  top: 0;
+}
+
+@keyframes pulse {
+  0% {
+    transform: rotate(-45deg) scale(1);
+  }
+  50% {
+    transform: rotate(-45deg) scale(1.18);
+  }
+  100% {
+    transform: rotate(-45deg) scale(1);
+  }
+}
+
+.hug-heart-text {
+  margin-top: 12px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #7b1b3a;
+}
+
+/* Slider */
+.hug-slider {
+  margin: 30px 0;
+  overflow: hidden;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.4);
+  padding: 12px;
+  box-shadow: 0px 6px 25px rgba(0, 0, 0, 0.15);
+}
+
+.hug-track {
+  display: flex;
+  gap: 12px;
+  animation: scroll 18s linear infinite;
+}
+
+.hug-track img {
+  width: 210px;
+  height: 145px;
+  border-radius: 15px;
+  object-fit: cover;
+  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.25);
+  transition: 0.3s;
+}
+
+.hug-track img:hover {
+  transform: scale(1.05);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Letter Box */
+.hug-letter-box {
+  margin-top: 25px;
+  padding: 22px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.45);
+  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.2);
+  text-align: left;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+.hug-letter-title {
+  font-size: 1.5rem;
+  color: #b30047;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 12px;
+  text-shadow: 0px 2px 10px rgba(255, 255, 255, 0.7);
+}
+
+/* 🔥 Letter Text Color Improved */
+.hug-letter-text {
+  font-size: 1.05rem;
+  font-weight: 650;
+  color: #2b0a17;
+  line-height: 1.8;
+  text-shadow: 0px 1px 2px rgba(255, 255, 255, 0.5);
+}
+
+/* Surprise */
+.hug-surprise {
+  margin-top: 25px;
+  padding: 22px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.35);
+  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.35);
+}
+
+.hug-surprise-title {
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: #b30047;
+}
+
+.hug-surprise-sub {
+  font-size: 1rem;
+  font-weight: 650;
+  color: #4a1c2d;
+}
+
+.hug-btn {
+  margin-top: 14px;
+  background: linear-gradient(45deg, #ff4081, #ff1744);
+  border: none;
+  padding: 13px 22px;
+  font-size: 1rem;
+  border-radius: 12px;
+  color: white;
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0px 8px 25px rgba(255, 23, 68, 0.45);
+}
+
+.hug-btn:hover {
+  transform: scale(1.06);
+  box-shadow: 0px 10px 30px rgba(255, 23, 68, 0.65);
+}
+
+.hug-gift-box {
+  margin-top: 18px;
+  padding: 18px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.65);
+  animation: fadeIn 1s ease-in-out;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.hug-gift-box h3 {
+  color: #b30047;
+  font-size: 1.3rem;
+  font-weight: 900;
+}
+
+.hug-gift-box p {
+  font-size: 1.05rem;
+  color: #2b0a17;
+  font-weight: 650;
+  line-height: 1.6;
+}
+
+.hug-gift-love {
+  margin-top: 10px;
+  font-size: 1.1rem;
+  font-weight: 900;
+  color: #ff1744;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Footer */
+.hug-footer {
+  margin-top: 25px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #4a1c2d;
+  opacity: 0.85;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .hug-container {
+    padding: 20px;
+  }
+
+  .hug-title {
+    font-size: 2.1rem;
+  }
+
+  .hug-track img {
+    width: 170px;
+    height: 120px;
+  }
+
+  .hug-letter-text {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hug-title {
+    font-size: 1.8rem;
+  }
+
+  .hug-subtitle {
+    font-size: 1rem;
+  }
+
+  .hug-btn {
+    width: 100%;
+  }
+
+  .hug-track img {
+    width: 140px;
+    height: 100px;
+  }
+}
